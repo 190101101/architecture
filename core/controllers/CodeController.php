@@ -15,7 +15,7 @@ class CodeController extends controller
 
     public function code()
     {
-        $this->layout('main', 'code', 'code', []);
+        $this->layout('main', 'code', 'home', 'code', []);
     }
 }
 

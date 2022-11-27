@@ -1,32 +1,32 @@
 <?php 
 
-abstract class Creator
+abstract class Creatora
 {
-    abstract public function factoryMethod(): Product;
+    abstract public function factoryMethoda(): Product;
 
     public function someOperation(): string
     {
-        $product = $this->factoryMethod();
-        $result = "Creator: The same creator's code has just worked with " .
+        $product = $this->factoryMethoda();
+        $result = "Creatora: The same creatora's code has just worked with " .
         $product->operation() . EOL;
 
         return $result;
     }
 }
 
-class ConcreteCreator1 extends Creator
+class ConcreteCreatora1a extends Creatora
 {
-    public function factoryMethod(): Product
+    public function factoryMethoda(): Product
     {
-        return new ConcreteProduct1();
+        return new ConcreteProduct1a();
     }
 }
 
-class ConcreteCreator2 extends Creator
+class ConcreteCreatora2a extends Creatora
 {
-    public function factoryMethod(): Product
+    public function factoryMethoda(): Product
     {
-        return new ConcreteProduct2();
+        return new ConcreteProduct2a();
     }
 }
 
@@ -35,27 +35,27 @@ interface Product
     public function operation(): string;
 }
 
-class ConcreteProduct1 implements Product
+class ConcreteProduct1a implements Product
 {
     public function operation(): string
     {
-        return "{Result of the ConcreteProduct1}";
+        return "{Result of the ConcreteProduct1a}";
     }
 }
 
-class ConcreteProduct2 implements Product
+class ConcreteProduct2a implements Product
 {
     public function operation(): string
     {
-        return "{Result of the ConcreteProduct2}";
+        return "{Result of the ConcreteProduct2a}";
     }
 }
 
-function clientCode(Creator $creator)
+function clientCode1(Creatora $creatora)
 {
-    echo "Client: I'm not aware of the creator's class, but it still works" . EOL;
-    echo $creator->someOperation();
+    echo "Client: I'm not aware of the creatora's class, but it still works" . EOL;
+    echo $creatora->someOperation();
 }
 
-clientCode(new ConcreteCreator1());
-clientCode(new ConcreteCreator2());
+clientCode1(new ConcreteCreatora1a());
+clientCode1(new ConcreteCreatora2a());

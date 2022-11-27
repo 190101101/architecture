@@ -15,7 +15,7 @@ class CreationalController extends controller
 
     public function FactoryMethod($type)
     {
-        $this->layout('main', 'creational', 'FactoryMethod/'.$type);
+        $this->layout('main', 'creational', 'FactoryMethod', $type);
     }
 }
 

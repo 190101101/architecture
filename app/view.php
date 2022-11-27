@@ -4,9 +4,9 @@ namespace app;
 
 class view
 {
-    public static function view($modulus, $method, $data = [])
+    public static function view($modulus, $dir, $method, $data = [])
     {
-        if(file_exists($file = "../core/views/{$modulus}/{$method}.php")){
+        if(file_exists($file = "../core/views/{$modulus}/{$dir}/{$method}.php")){
             ob_start();
             require_once $file;
             $content = ob_get_contents();
@@ -18,10 +18,10 @@ class view
         }
     }
 
-	public static function layout($layout, $modulus, $method, $data = [])
+	public static function layout($layout, $modulus, $dir, $method, $data = [])
 	{
         $data['VIEW'] = $method == NULL ?: 
-            view::view($modulus, $method, (object) $data);
+            view::view($modulus, $dir, $method, (object) $data);
         require_once "../layout/{$layout}.php";
 	}
 }

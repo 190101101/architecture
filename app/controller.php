@@ -6,13 +6,13 @@ class controller
 {
     public function __construct() {}
 
-	public function view($modulus, $method, $data = [])
+	public function view($modulus, $dir, $method, $data = [])
 	{
-		return view::view($modulus, $method, $data);
+		return view::view($modulus, $dir, $method, $data);
 	}
 
-	public function layout($layout, $modulus, $method, $data = [])
+	public function layout($layout, $modulus, $dir, $method, $data = [])
 	{      
-		return view::layout($layout, $modulus, $method, $data);
+		return view::layout($layout, $modulus, $dir, $method, $data);
 	}
 }
