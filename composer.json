@@ -1,0 +1,15 @@
+{
+    "autoload":{
+        "psr-4":{
+            "app\\":"app/",
+            "core\\":"core/",
+            "library\\":"library/"
+        },
+        "classmap":[
+            "app/",
+            "core/",
+            "library/"
+        ]
+    },
+    "require": {}
+}
