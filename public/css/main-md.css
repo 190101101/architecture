@@ -1,0 +1,23 @@
+@media screen and (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-310px);
+        transition: all 100ms linear;
+    }
+    
+    .active.sidebar {
+        transform: translateX(0px);
+        transition-timing-function: cubic-bezier(0, 2, 1, 0.5);
+
+    }
+    .page_content {
+        width: 100%;
+        margin-left: 0px;
+        transition: all 150ms linear;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar, .wrap, .main_content, .inner_content, .page_content, .page_head{
+        min-width: 320px;
+    }
+}
