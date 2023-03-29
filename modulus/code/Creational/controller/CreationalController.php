@@ -15,12 +15,12 @@ class CreationalController extends controller
 
     public function FactoryMethod($type)
     {
-        $this->layout('main', 'code', 'Creational/view/FactoryMethod', $type);
+        $this->layout('code', 'code', 'Creational/view/FactoryMethod', $type);
     }
     
     public function Singleton($type)
     {
-        $this->layout('main', 'code', 'Creational/view/Singleton', $type);
+        $this->layout('code', 'code', 'Creational/view/Singleton', $type);
     }
 }
 

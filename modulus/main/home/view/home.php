@@ -1,1 +1,1 @@
-<h1>hello friend</h1>
+<h1>home page</h1>
