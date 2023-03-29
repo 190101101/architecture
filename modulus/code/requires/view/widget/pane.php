@@ -7,6 +7,7 @@
         array_pop($explode);
         $implode = implode('/', $explode);
         $url = refactoring_guru(strtolower($explode[1]));
+
         foreach(['conceptual', 'real', 'test'] as $key): ?>
         <li>
             <a href="<?php echo $implode.'/'.$key; ?>">
@@ -14,6 +15,11 @@
             </a>
         </li>
         <?php endforeach; ?>
+        <li>
+            <a href="<?php echo $implode; ?>/code">
+                <span>code</span>
+            </a>
+        </li>
         <li>
             <a href="https://refactoring.guru/ru/design-patterns/<?php echo $url; ?>/php/example"
                 target="_blank">

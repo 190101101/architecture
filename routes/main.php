@@ -13,7 +13,7 @@ app::get('/home', '/home/index', 'main');
 app::get('/dd', '/dd/dd', 'main');
 
 app::get('/creational/factorymethod/(.*?)', '/Creational/FactoryMethod/(.*?)', 'code');
-app::get('/creational/Singleton/(.*?)', '/Creational/Singleton/(.*?)', 'code');
+app::get('/creational/singleton/(.*?)', '/Creational/Singleton/(.*?)', 'code');
 
 /*error*/
 app::get('/404', '/error/PageNotFound', 'main');

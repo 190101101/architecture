@@ -15,7 +15,7 @@
                 </li>
 
                 <li class="cat-li">
-                    <a href="/creational/Singleton/conceptual" class="cat-link">Singleton</a>
+                    <a href="/creational/singleton/conceptual" class="cat-link">Singleton</a>
                     <span>Singleton</span>
                 </li>
             </div>
