@@ -21,6 +21,11 @@
             </a>
         </li>
         <li>
+            <a href="<?php echo $implode; ?>/info">
+                <span>info</span>
+            </a>
+        </li>
+        <li>
             <a href="https://refactoring.guru/ru/design-patterns/<?php echo $url; ?>/php/example"
                 target="_blank">
                 <span>pattern</span>
