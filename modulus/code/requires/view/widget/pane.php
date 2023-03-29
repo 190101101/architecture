@@ -16,8 +16,8 @@
         </li>
         <?php endforeach; ?>
         <li>
-            <a href="<?php echo $implode; ?>/code">
-                <span>code</span>
+            <a href="<?php echo $implode; ?>/example">
+                <span>example</span>
             </a>
         </li>
         <li>

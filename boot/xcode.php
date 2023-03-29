@@ -582,6 +582,9 @@ function refactoring_guru($key){
         case 'factorymethod':
             return 'factory-method';
         break;
+        case 'abstractfactory':
+            return 'abstract-factory';
+        break;
         case 'singleton':
             return 'singleton';
         break;
