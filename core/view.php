@@ -6,7 +6,7 @@ class view
 {
     public static function view($area, $modulus, $method, $data = [])
     {
-        if(file_exists($file = "../modulus/{$area}/{$modulus}/view/{$method}.php")){
+        if(file_exists($file = "../modulus/{$area}/{$modulus}/{$method}.php")){
             require_once $file;
         }
         else{
@@ -37,6 +37,3 @@ class view
         require_once "../layout/{$layout}.php";
 	}
 }
-
-
-// qq(file_exists($file = "../modulus/{$area}/view/{$modulus}/{$method}.php"));

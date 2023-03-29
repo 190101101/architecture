@@ -15,7 +15,7 @@ class ddController extends controller
 
     public function dd()
     {
-        $this->layout('main', 'main', 'dd', 'dd', []);
+        $this->layout('main', 'main', 'dd/view', 'dd', []);
     }
 }
 
