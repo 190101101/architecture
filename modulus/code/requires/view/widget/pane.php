@@ -1,12 +1,12 @@
-<?php if(REQUEST() !== '/'): ?>
+<?php if(REQUEST() !== '/' and REQUEST() !== '/home'): ?>
 <div class="table_content_head">
     <ul class="nav nav-tab">
-        <?php 
-            $explode = explode('/', REQUEST());
-            array_shift($explode);
-            array_pop($explode);
-            $implode = implode('/', $explode);
-
+    <?php 
+        $explode = explode('/', REQUEST());
+        array_shift($explode);
+        array_pop($explode);
+        $implode = implode('/', $explode);
+        $url = refactoring_guru(strtolower($explode[1]));
         foreach(['conceptual', 'real', 'test'] as $key): ?>
         <li>
             <a href="<?php echo $implode.'/'.$key; ?>">
@@ -14,6 +14,12 @@
             </a>
         </li>
         <?php endforeach; ?>
+        <li>
+            <a href="https://refactoring.guru/ru/design-patterns/<?php echo $url; ?>/php/example"
+                target="_blank">
+                <span>pattern</span>
+            </a>
+        </li>
     </ul>
 </div>
 <?php endif; ?>

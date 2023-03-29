@@ -97,7 +97,7 @@ class app
                 }
             }
         }
-        ddx('404');
+        REDIRECT('404');
     }
 }
 

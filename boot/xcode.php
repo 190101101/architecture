@@ -576,3 +576,17 @@ function exploder($delimiter, $data)
 function replace_str($find, $delimiter, $text){
     return str_replace($find, $delimiter, $text);
 }
+
+function refactoring_guru($key){
+    switch($key){
+        case 'factorymethod':
+            return 'factory-method';
+        break;
+        case 'singleton':
+            return 'singleton';
+        break;
+        default:
+            return 'oops';
+            break;
+    }
+}

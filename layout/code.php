@@ -13,7 +13,6 @@
                 <div class="main_content">
                     <div class="inner_content">
                         <?php $main->view('code', 'requires/view', 'widget/sidebar'); ?>
-
                         <div class="page_content">
                             <?php $main->view('code', 'requires/view', 'widget/pane'); ?>
                             <div class="table_content">

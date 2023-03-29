@@ -15,14 +15,14 @@ class errorController extends controller
 
     public function pageNotFound()
     {
-        $this->layout('main', 'main', 'error', '404', [
+        $this->layout('main', 'main', 'error/view', '404', [
             'error' => 'error not found'
         ]);
     }
 
     public function errorType($type)
     {
-        $this->layout('main', 'main', 'error', 'errorType', [
+        $this->layout('main', 'main', 'error/view', 'errorType', [
             'error' => $this->error->errorType($type)
         ]);
     }
