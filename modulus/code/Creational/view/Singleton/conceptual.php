@@ -1,6 +1,7 @@
 <?php 
 
 class Singleton{
+	
 	private static $instances = [];
 	
 	protected function __construct(){}

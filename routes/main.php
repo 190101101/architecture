@@ -12,6 +12,7 @@ app::get('/', '/home/index', 'main');
 app::get('/home', '/home/index', 'main');
 app::get('/dd', '/dd/dd', 'main');
 
+app::get('/creational/prototype/(.*?)', '/Creational/Prototype/(.*?)', 'code');
 app::get('/creational/abstractfactory/(.*?)', '/Creational/AbstractFactory/(.*?)', 'code');
 app::get('/creational/factorymethod/(.*?)', '/Creational/FactoryMethod/(.*?)', 'code');
 app::get('/creational/singleton/(.*?)', '/Creational/Singleton/(.*?)', 'code');

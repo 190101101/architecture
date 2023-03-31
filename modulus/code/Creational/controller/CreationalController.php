@@ -13,6 +13,11 @@ class CreationalController extends controller
         $this->creational = new CreationalModel();
     }
 
+    public function Prototype($type)
+    {
+        $this->layout('code', 'code', 'Creational/view/Prototype', $type);
+    }
+
     public function AbstractFactory($type)
     {
         $this->layout('code', 'code', 'Creational/view/AbstractFactory', $type);

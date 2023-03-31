@@ -579,6 +579,9 @@ function replace_str($find, $delimiter, $text){
 
 function refactoring_guru($key){
     switch($key){
+        case 'prototype':
+            return 'prototype';
+        break;
         case 'factorymethod':
             return 'factory-method';
         break;
@@ -589,7 +592,22 @@ function refactoring_guru($key){
             return 'singleton';
         break;
         default:
-            return 'oops';
+            return 'Oo wrong';
             break;
+    }
+}
+
+
+function url_exploder($p1 = null){
+    if(REQUEST() !== '/' and REQUEST() !== '/home'){
+
+        if(!$p1){
+            $p1 = 0;
+        }
+
+        $explode = explode('/', REQUEST());
+        array_shift($explode);
+        array_pop($explode);
+        return strtolower($explode[$p1]);
     }
 }

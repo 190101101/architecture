@@ -9,7 +9,7 @@ class model
 
 	public function __construct()
 	{
-		$this->db = new triangle;
+		$this->db = new triangle();
 	}
 }
 

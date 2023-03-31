@@ -2,15 +2,15 @@
 
 class Singleton{
 	private static $instances = [];
-	
+
 	protected function __construct(){}
 	
 	protected function __clone(){}
 	
 	public function __wakeup(){
-		throw new \Exception('Cannot unserialize a singleton');
+		throw new \Exception('Cannot unserialize a Singleton');
 	}
-
+	
 	public static function getInstance(){
 		$class = static::class;
 		if(!isset(self::$instances[$class])){
@@ -29,7 +29,7 @@ class Logger extends Singleton{
 
 	public function writeLog(string $message):void{
 		$date = date('H:i:s');
-		fwrite($this->fileHandle, "{$date} : $message\n");
+		fwrite($this->fileHandle, "{$date} : {$message}\n");	
 	}
 
 	public static function log(string $message):void{
@@ -38,19 +38,7 @@ class Logger extends Singleton{
 	}
 }
 
-class Config extends Singleton{
-	private $hashmap = [];
-
-	public function getValue(string $key): string{
-		return $this->hashmap[$key];
-	}
-
-	public function setValue(string $key, string $value):void{
-		$this->hashmap[$key] = $value;
-	}
-}
-
-Logger::log('started');
+Logger::log('start');
 
 $l1 = Logger::getInstance();
 $l2 = Logger::getInstance();
@@ -61,22 +49,7 @@ if($l1 === $l2){
 	Logger::log("Logger are different.");
 }
 
-$config1 = Config::getInstance();
+Logger::log('end');
 
-$login = 'test_login';
-$password = 'test_password';
-
-$config1->setValue('login', $login);
-$config1->setValue('password', $password);
-
-$config2 = Config::getInstance();
-
-if($login == $config2->getValue('login') &&
-	$password == $config2->getValue('password')){
-	Logger::log('Config singleton also works fine.');
-}
-
-
-Logger::log('Finished!');
 
 ?>

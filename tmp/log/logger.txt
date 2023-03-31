@@ -1,0 +1,4 @@
+23:43:01 : started
+23:43:01 : Logger has a single instance.
+23:43:01 : Config singleton also works fine.
+23:43:01 : Finished!
