@@ -8,31 +8,36 @@ function db()
 function ee()
 {
 	echo '<body style="background: #14171a !important; color: #e84118 !important;">';
-	echo '<div class="dd_class"><pre>'; print_r('exit'); echo '</pre></div></body>';
+	echo '<div><pre>'; print_r('exit'); echo '</pre></div></body>';
 	exit;
 }
 
 function dd($data)
 {
-	echo '<div class="dd_class"><pre>'; print_r($data); echo '<pre></div>';
+	echo '<div><pre>'; print_r($data); echo '<pre></div>';
+}
+
+function vv($data)
+{
+    echo '<div><pre>'; var_export($data); echo '<pre></div>';
 }
 
 function ddx($data)
 {	
 	echo '<body style="background: #14171a !important; color: #e84118 !important;">';
-	echo '<div class="dd_class"><pre>'; print_r($data); echo '<pre></div></body>';
+	echo '<div><pre>'; print_r($data); echo '<pre></div></body>';
 	exit;
 }
 
 function qq($data)
 {
-	echo '<div class="dd_class"><pre>'; var_dump($data); echo '<pre></div>';
+	echo '<div><pre>'; var_dump($data); echo '<pre></div>';
 }
 
 function qqx($data)
 {
 	echo '<body style="background: #14171a !important; color: #e84118 !important;">';
-	echo '<div class="dd_class"><pre>'; var_dump($data); echo '<pre></div></body>';
+	echo '<div><pre>'; var_dump($data); echo '<pre></div></body>';
 	exit;
 }
 

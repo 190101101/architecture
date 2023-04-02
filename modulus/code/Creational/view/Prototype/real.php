@@ -16,7 +16,7 @@ class Page{
 	}
 
 	public function addComment(string $comment):void{
-		$this->comment[] = $comment;
+		$this->comments[] = $comment;
 	}
 
 	public function __clone(){

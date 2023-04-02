@@ -4,13 +4,18 @@
     <?php 
         $explode = explode('/', REQUEST());
         array_shift($explode);
+        $lastkey = $explode[2];
         array_pop($explode);
         $implode = implode('/', $explode);
         $url = refactoring_guru(strtolower($explode[1]));
 
         foreach(['conceptual', 'real', 'test'] as $key): ?>
         <li>
-            <a href="<?php echo $implode.'/'.$key; ?>">
+            <a href="<?php echo $implode.'/'.$key; ?>" 
+                <?php if($lastkey == $key): ?>
+                    style="color: yellow !important;"
+                <?php endif; ?>
+                >
                 <span><?php echo $key; ?></span>
             </a>
         </li>
