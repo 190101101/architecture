@@ -1,4 +1,4 @@
-<?php if(REQUEST() !== '/' and REQUEST() !== '/home'): ?>
+<?php if(REQUEST() !== '/' and REQUEST() !== '/home' and REQUEST() !== '/dd'): ?>
 <div class="table_content_head">
     <ul class="nav nav-tab">
     <?php 

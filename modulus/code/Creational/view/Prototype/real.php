@@ -41,7 +41,7 @@ class Author{
 }
 
 function clientCode(){
-	$author = new Author("Jogn Smith");
+	$author = new Author("John Smith");
 	$page = new Page('Tip of the day', 'keep calm and carry on ', $author);
 	$page->addComment("Nice tip, thanks!");
 

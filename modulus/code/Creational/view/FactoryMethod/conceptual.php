@@ -14,19 +14,19 @@ abstract class Creatora
     }
 }
 
-class ConcreteCreatora1a extends Creatora
+class ConcreteCreator1 extends Creatora
 {
     public function factoryMethoda(): Product
     {
-        return new ConcreteProduct1a();
+        return new ConcreteProduct1();
     }
 }
 
-class ConcreteCreatora2a extends Creatora
+class ConcreteCreator2 extends Creatora
 {
     public function factoryMethoda(): Product
     {
-        return new ConcreteProduct2a();
+        return new ConcreteProduct2();
     }
 }
 
@@ -35,19 +35,19 @@ interface Product
     public function operation(): string;
 }
 
-class ConcreteProduct1a implements Product
+class ConcreteProduct1 implements Product
 {
     public function operation(): string
     {
-        return "{Result of the ConcreteProduct1a}";
+        return "{Result of the ConcreteProduct1}";
     }
 }
 
-class ConcreteProduct2a implements Product
+class ConcreteProduct2 implements Product
 {
     public function operation(): string
     {
-        return "{Result of the ConcreteProduct2a}";
+        return "{Result of the ConcreteProduct2}";
     }
 }
 
@@ -57,5 +57,5 @@ function clientCode1(Creatora $creatora)
     echo $creatora->someOperation();
 }
 
-clientCode1(new ConcreteCreatora1a());
-clientCode1(new ConcreteCreatora2a());
+clientCode1(new ConcreteCreator1());
+clientCode1(new ConcreteCreator2());

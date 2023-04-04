@@ -604,7 +604,7 @@ function refactoring_guru($key){
 
 
 function url_exploder($p1 = null){
-    if(REQUEST() !== '/' and REQUEST() !== '/home'){
+    if(REQUEST() !== '/' and REQUEST() !== '/home' AND REQUEST() !== '/dd'){
 
         if(!$p1){
             $p1 = 0;
