@@ -1,30 +1,29 @@
 <?php 
 
-abstract class Creatora
+abstract class creator
 {
-    abstract public function factoryMethoda(): Product;
+    abstract public function factoryMethod(): Product;
 
     public function someOperation(): string
     {
-        $product = $this->factoryMethoda();
-        $result = "Creatora: The same creatora's code has just worked with " .
+        $product = $this->factoryMethod();
+        $result = "creator: The same creator's code has just worked with " .
         $product->operation() . EOL;
-
         return $result;
     }
 }
 
-class ConcreteCreator1 extends Creatora
+class ConcreteCreator1 extends creator
 {
-    public function factoryMethoda(): Product
+    public function factoryMethod(): Product
     {
         return new ConcreteProduct1();
     }
 }
 
-class ConcreteCreator2 extends Creatora
+class ConcreteCreator2 extends creator
 {
-    public function factoryMethoda(): Product
+    public function factoryMethod(): Product
     {
         return new ConcreteProduct2();
     }
@@ -51,11 +50,11 @@ class ConcreteProduct2 implements Product
     }
 }
 
-function clientCode1(Creatora $creatora)
+function clientCode(creator $creator)
 {
-    echo "Client: I'm not aware of the creatora's class, but it still works" . EOL;
-    echo $creatora->someOperation();
+    echo "Client: I'm not aware of the creator's class, but it still works" . EOL;
+    echo $creator->someOperation();
 }
 
-clientCode1(new ConcreteCreator1());
-clientCode1(new ConcreteCreator2());
+clientCode(new ConcreteCreator1());
+clientCode(new ConcreteCreator2());
